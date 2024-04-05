@@ -169,7 +169,7 @@ export const FileUploadExtension = {
           cursor: pointer;
         }
       </style>
-      <div class='my-file-upload'>Drag and drop a file here or click to upload</div>
+      <div class='my-file-upload'>Click here to upload your image. I will need some time to look at it. So please be patient 🙂</div>
       <input type='file' style='display: none;'>
     `
 
@@ -184,7 +184,7 @@ export const FileUploadExtension = {
       const file = fileInput.files[0]
       console.log('File selected:', file)
 
-      fileUploadContainer.innerHTML = `<img src="https://s3.amazonaws.com/com.voiceflow.studio/share/upload/upload.gif" alt="Upload" width="50" height="50">`
+      fileUploadContainer.innerHTML = `<img src="https://lwfiles.mycourse.app/65f9f374dd014cca1c9acca6-public/c7c6a9e63777c1f71b90b5468af66f0d.gif" alt="Upload" width="50" height="50">`
 
       var data = new FormData()
       data.append('file', file)
@@ -202,7 +202,7 @@ export const FileUploadExtension = {
         })
         .then((result) => {
           fileUploadContainer.innerHTML =
-            '<img src="https://s3.amazonaws.com/com.voiceflow.studio/share/check/check.gif" alt="Done" width="50" height="50">'
+            '<img src="https://lwfiles.mycourse.app/65f9f374dd014cca1c9acca6-public/fcf387d258421b6119eeafab4838b74f.gif" alt="Done" width="50" height="50">'
           console.log('File uploaded:', result.data.url)
           window.voiceflow.chat.interact({
             type: 'complete',
